@@ -11,5 +11,9 @@ import { Player } from './player'
      this.numberOfRunsGiven = 0;
      this.numberOfWickets = 0;
     }
+
+addRuns(run: number) {
+    this.numberOfRunsGiven += run;
+}
  
 }

@@ -8,5 +8,8 @@ class Bowler extends player_1.Player {
         this.numberOfRunsGiven = 0;
         this.numberOfWickets = 0;
     }
+    addRuns(run) {
+        this.numberOfRunsGiven += run;
+    }
 }
 exports.Bowler = Bowler;

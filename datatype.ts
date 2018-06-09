@@ -1,11 +1,19 @@
 export interface datatype  {
     runScored: number,
     isOut: boolean,
-    dismissalType: string,
-    dismissalInfo: {
-        fielderName: String,
-        hasBatsmanCrossed: true,
-    },
+    isExtra?:boolean,
+    extraType?:string,
+    extraInfo?:ExtraInfo,
+    dismissalType?: string,
+    dismissalInfo?: DismissalInfo,
     batsmanName: string,
-    bowlerName: string
+    bowlerName: string,
+}
+
+export interface DismissalInfo {
+    fielderName: String,
+    hasBatsmanCrossed: true,
+}
+export interface ExtraInfo {
+    runsOffered: number
 }
