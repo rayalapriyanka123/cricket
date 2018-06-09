@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const scorer_1 = require("./scorer");
 const scorer = new scorer_1.Scorer();
+var tab = require('table-master');
 const chalk = require('chalk');
 /*const batsman1 = new Batsman('K L Rahul');
 const batsman2 = new Batsman('Rohit Sharma');
@@ -69,42 +70,42 @@ let obj = [{
         "isOut": true,
         "dismissalType": 'catch',
         "batsmanName": "sehwag",
-        "bowlerName": "ashwin"
+        "bowlerName": "Ashwin "
     },
     {
         "runScored": 2,
         "isOut": false,
         "dismissalType": 'catch',
         "batsmanName": "sachin",
-        "bowlerName": "ashwin"
+        "bowlerName": "Ashwin "
     },
     {
         "runScored": 2,
         "isOut": false,
         "dismissalType": 'catch',
         "batsmanName": "sachin",
-        "bowlerName": "ashwin"
+        "bowlerName": "Ashwin "
     },
     {
         "runScored": 2,
         "isOut": false,
         "dismissalType": 'catch',
         "batsmanName": "sachin",
-        "bowlerName": "ashwin"
+        "bowlerName": "Ashwin "
     },
     {
         "runScored": 2,
         "isOut": false,
         "dismissalType": 'catch',
         "batsmanName": "sachin",
-        "bowlerName": "ashwin"
+        "bowlerName": "Ashwin "
     },
     {
         "runScored": 0,
         "isOut": true,
         "dismissalType": 'catch',
         "batsmanName": "sachin",
-        "bowlerName": "ashwin"
+        "bowlerName": "Ashwin "
     },
     {
         "runScored": 0,
@@ -115,32 +116,32 @@ let obj = [{
             "hasBatsmanCrossed": true,
         },
         "batsmanName": "karthik",
-        "bowlerName": "Ali"
+        "bowlerName": "Ali    "
     },
     {
         "runScored": 1,
         "isOut": false,
         "batsmanName": "karthik",
-        "bowlerName": "Ali"
+        "bowlerName": "Ali    "
     },
     {
         "runScored": 4,
         "isOut": false,
         "batsmanName": "Rohit",
-        "bowlerName": "Ali"
+        "bowlerName": "Ali    "
     },
     {
         "runScored": 1,
         "isOut": true,
         "dismissalType": 'Run Out',
         "batsmanName": "Rohit",
-        "bowlerName": "Ali"
+        "bowlerName": "Ali    "
     },
     {
         "runScored": 1,
         "isOut": false,
         "batsmanName": "karthik",
-        "bowlerName": "Ali"
+        "bowlerName": "Ali    "
     },
     {
         "runScored": 0,
@@ -150,8 +151,8 @@ let obj = [{
             "runsOffered": 5
         },
         "batsmanName": "Dhoni",
-        "bowlerName": "Ali"
-    }
+        "bowlerName": "Ali    "
+    },
 ];
 obj.forEach((ball) => {
     runs += ball.runScored;
@@ -192,7 +193,7 @@ function printWhenBatsmanOut(ball) {
     if (!map.has(ball.batsmanName)) {
         map.set(ball.batsmanName, 0);
     }
-    console.log(chalk.red(ball.batsmanName) + "        " + (chalk.blue(ball.dismissalType) + "            " + (chalk.yellow(map.get(ball.batsmanName))) + "(" + (chalk.blue(total.get(ball.batsmanName))) + ")"));
+    console.log(chalk.red(ball.batsmanName) + "      " + (chalk.blue(ball.dismissalType) + "     " + (chalk.yellow(map.get(ball.batsmanName))) + "(" + (chalk.blue(total.get(ball.batsmanName))) + ")"));
     map.delete(ball.batsmanName);
 }
 function initialize(ball) {
@@ -270,16 +271,16 @@ function print() {
     //  console.log(keys);
     //console.log(values);
     for (var i = 0; i < keys.length; i++) {
-        console.log((chalk.red(keys[i])) + "        " + (chalk.green("Not Out")) + "         " + (chalk.yellow(values[i])));
+        console.log((chalk.red(keys[i])) + "     " + (chalk.green("Not Out")) + "      " + (chalk.yellow(values[i])));
     }
     keys = Array.from(run.keys());
     let values1 = Array.from(maiden.values());
     let values2 = Array.from(run.values());
     let values3 = Array.from(wicket.values());
     let values4 = Array.from(over.values());
-    console.log("Total       " + chalk.yellow(totalScore) + "   " + "for       " + (chalk.red(totalWickets)));
+    console.log("Total" + "     " + chalk.yellow(totalScore) + "        " + "for" + "   " + (chalk.red(totalWickets)));
     for (var i = 0; i < keys.length; i++) {
-        console.log((chalk.blue(keys[i])) + "    " + (chalk.white(values1[i])) + "           " + (chalk.yellow(values2[i])) + "         " + (chalk.red(values3[i])) + "              " + (chalk.blue(values4[i])));
+        console.log((chalk.blue(keys[i])) + "     " + (chalk.white(values1[i])) + "      " + (chalk.yellow(values2[i])) + "      " + (chalk.red(values3[i])) + "     " + (chalk.blue(values4[i])));
     }
     // console.log(map.values().next().value);
     //console.log(map.keys().next().value);

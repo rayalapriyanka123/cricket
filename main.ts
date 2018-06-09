@@ -4,6 +4,7 @@ import value, * as data from './data.json';
 import { Bowler } from './bowler';
 import { datatype } from './datatype';
 const scorer = new Scorer();
+var tab   = require('table-master');
 const chalk = require('chalk');
 
 /*const batsman1 = new Batsman('K L Rahul');
@@ -79,14 +80,14 @@ let obj: Array<datatype> =  [{
     "isOut": true,
     "dismissalType": 'catch',
     "batsmanName": "sehwag",
-    "bowlerName": "ashwin"
+    "bowlerName": "Ashwin "
 },
 {
     "runScored": 2,
     "isOut": false,
     "dismissalType": 'catch',
     "batsmanName": "sachin",
-    "bowlerName": "ashwin"
+    "bowlerName": "Ashwin "
 }
 ,
 {
@@ -94,7 +95,7 @@ let obj: Array<datatype> =  [{
     "isOut": false,
     "dismissalType": 'catch',
     "batsmanName": "sachin",
-    "bowlerName": "ashwin"
+    "bowlerName": "Ashwin "
 }
 ,
 {
@@ -102,7 +103,7 @@ let obj: Array<datatype> =  [{
     "isOut": false,
     "dismissalType": 'catch',
     "batsmanName": "sachin",
-    "bowlerName": "ashwin"
+    "bowlerName": "Ashwin "
 }
 ,
 {
@@ -110,7 +111,7 @@ let obj: Array<datatype> =  [{
     "isOut": false,
     "dismissalType": 'catch',
     "batsmanName": "sachin",
-    "bowlerName": "ashwin"
+    "bowlerName": "Ashwin "
 }
 ,
 {
@@ -118,7 +119,7 @@ let obj: Array<datatype> =  [{
     "isOut": true,
     "dismissalType": 'catch',
     "batsmanName": "sachin",
-    "bowlerName": "ashwin"
+    "bowlerName": "Ashwin "
 },
 {
     "runScored": 0,
@@ -129,13 +130,13 @@ let obj: Array<datatype> =  [{
         "hasBatsmanCrossed": true,
     },
     "batsmanName": "karthik",
-    "bowlerName": "Ali"
+    "bowlerName": "Ali    "
 },
 {
     "runScored": 1,
     "isOut": false,
     "batsmanName": "karthik",
-    "bowlerName": "Ali"
+    "bowlerName": "Ali    "
 }
 ,
 {
@@ -143,7 +144,7 @@ let obj: Array<datatype> =  [{
     "isOut": false,
     
     "batsmanName": "Rohit",
-    "bowlerName": "Ali"
+    "bowlerName": "Ali    "
     
 }
 ,
@@ -152,14 +153,14 @@ let obj: Array<datatype> =  [{
     "isOut": true,
     "dismissalType": 'Run Out',
     "batsmanName": "Rohit",
-    "bowlerName": "Ali"
+    "bowlerName": "Ali    "
 }
 ,
 {
     "runScored": 1,
     "isOut": false,
     "batsmanName": "karthik",
-    "bowlerName": "Ali"
+    "bowlerName": "Ali    "
 }
 ,
 {
@@ -171,8 +172,9 @@ let obj: Array<datatype> =  [{
     "runsOffered":5
     },
     "batsmanName": "Dhoni",
-    "bowlerName": "Ali"
-}
+    "bowlerName": "Ali    "
+},
+
 
 
 ];
@@ -238,7 +240,7 @@ let obj: Array<datatype> =  [{
     } 
 
     
-   console.log(chalk.red(ball.batsmanName) + "        " + (chalk.blue(ball.dismissalType) + "            " +  (chalk.yellow(map.get(ball.batsmanName))) + "("+(chalk.blue(total.get(ball.batsmanName)))+")"));
+   console.log(chalk.red(ball.batsmanName) + "      " + (chalk.blue(ball.dismissalType) + "     " +  (chalk.yellow(map.get(ball.batsmanName))) + "("+(chalk.blue(total.get(ball.batsmanName)))+")"));
 
    map.delete(ball.batsmanName);
  }
@@ -357,17 +359,17 @@ function print()
 
     for(var i=0;i<keys.length;i++)
     {
-        console.log((chalk.red(keys[i])) +"        "+ (chalk.green("Not Out")) +"         "+ (chalk.yellow(values[i])));
+        console.log((chalk.red(keys[i])) +"     "+ (chalk.green("Not Out")) +"      "+ (chalk.yellow(values[i])));
     }
     keys = Array.from( run.keys() );
   let   values1 = Array.from( maiden.values() );
   let   values2 = Array.from( run.values());
   let   values3 = Array.from( wicket.values() );
   let   values4 = Array.from( over.values() );
-  console.log("Total       "+chalk.yellow(totalScore)+"   "+"for       "+(chalk.red(totalWickets)));
+  console.log("Total"+"     "+chalk.yellow(totalScore)+"        "+"for"+"   "+(chalk.red(totalWickets)));
   for(var i=0;i<keys.length;i++)
   {
-      console.log((chalk.blue(keys[i])) + "    " + (chalk.white(values1[i]))  + "           " + (chalk.yellow(values2[i])) + "         " + (chalk.red(values3[i])) + "              " + (chalk.blue(values4[i])));
+      console.log((chalk.blue(keys[i])) + "     " + (chalk.white(values1[i]))  + "      " + (chalk.yellow(values2[i])) + "      " + (chalk.red(values3[i])) + "     " + (chalk.blue(values4[i])));
   }
        // console.log(map.values().next().value);
         //console.log(map.keys().next().value);
